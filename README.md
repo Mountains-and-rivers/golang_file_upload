@@ -83,4 +83,4 @@ func main() {
 }  
 ```
 
-# 接受文件服务器 receiveFileServer.go
+# 接收文件服务器 receiveFileServer.go
