@@ -1,7 +1,7 @@
 # golang 2种文件上传方式
 
 
-# octet-stream方式上传 文件：golang_file_upload\octet-stream_upload.go   
+# octet-stream方式上传！文件：golang_file_upload\octet-stream_upload.go   
 
 ```
 	file, err := os.Open("./filename")
@@ -23,7 +23,7 @@
 ```
 
 
-# multipart【表单】方式上传 文件：golang_file_upload\octet-stream_upload.go   
+# multipart【表单方式，携带key value】方式上传！文件：golang_file_upload\octet-stream_upload.go   
 借助了 开源库： mime/multipart  
 ```
 func newfileUploadRequest(uri string, params map[string]string, paramName, path string) (*http.Request, error) {
