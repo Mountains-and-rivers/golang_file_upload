@@ -84,3 +84,26 @@ func main() {
 ```
 
 # 接收文件服务器 receiveFileServer.go
+
+
+服务器把收到的文件内存存为result
+```
+func uploadHandler(w http.ResponseWriter, r *http.Request) {
+	file, err := os.Create("./result")
+	if err != nil {
+		panic(err)
+	}
+	n, err := io.Copy(file, r.Body)
+	if err != nil {
+		panic(err)
+	}
+
+	w.Write([]byte(fmt.Sprintf("%d bytes are recieved.\n", n)))
+}
+
+func main() {
+	http.HandleFunc("/upload", uploadHandler)
+
+	http.ListenAndServe(":5050", nil)
+}
+```
