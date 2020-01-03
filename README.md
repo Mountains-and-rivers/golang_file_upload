@@ -21,7 +21,7 @@
 ```
 
 
-# multipart【表单方式，携带key value】方式上传！文件：octet-stream_upload.go   
+# multipart【表单方式，携带key value】方式上传！文件：multipart_upload.go  
 借助了 开源库： mime/multipart  
 ```
 func newfileUploadRequest(uri string, params map[string]string, paramName, path string) (*http.Request, error) {
