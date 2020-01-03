@@ -2,7 +2,7 @@
 
 
 # octet-stream方式上传！文件：golang_file_upload\octet-stream_upload.go   
-
+请求头添加 binary/octet-stream
 ```
 	file, err := os.Open("./filename")
 	if err != nil {
@@ -18,8 +18,6 @@
 	message, _ := ioutil.ReadAll(res.Body)
 	fmt.Printf(string(message))
 }  
-
-请求头添加 binary/octet-stream
 ```
 
 
